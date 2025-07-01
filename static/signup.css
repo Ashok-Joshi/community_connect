@@ -1,0 +1,94 @@
+/* Design for Sign In page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  background-color: #0d47a1;
+  text-align: center;
+  padding: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner h1 {
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.banner p {
+  font-size: 16px;
+  color: #dcdcdc;
+  margin-top: 10px;
+}
+
+.form-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 35px 40px;
+  margin-top: 60px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  width: 360px;
+  backdrop-filter: blur(6px);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #90caf9;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #3949ab;
+  border-radius: 6px;
+  background-color: #121212;
+  color: #ffffff;
+  transition: border 0.3s ease, transform 0.2s ease;
+}
+
+input:focus {
+  border-color: #64b5f6;
+  outline: none;
+  transform: scale(1.02);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0d47a1;
+  transform: scale(1.03);
+}

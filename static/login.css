@@ -1,0 +1,104 @@
+/* Design for Login page */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  background-color: #0d47a1;
+  text-align: center;
+  padding: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.banner p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #d0d0d0;
+}
+
+.form-box {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 35px 40px;
+  margin-top: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  width: 360px;
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #90caf9;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #eeeeee;
+}
+
+input,
+button {
+  width: 100%; /* Yeh line dono input aur button ke liye apply hogi */
+  padding: 10px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input {
+  color: #fff;
+  background-color: #1c2a3a;
+}
+
+input:focus {
+  outline: 2px solid #64b5f6;
+}
+
+button {
+  background-color: #1565c0;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #003c8f;
+  transform: scale(1.03);
+}
+
+.extra-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.extra-link a {
+  color: #81d4fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.extra-link a:hover {
+  text-decoration: underline;
+}
