@@ -16,10 +16,13 @@
     <h2>Login to Your Account</h2>
     <form method="POST" action="/login">
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="ashok@example.com" required />
+      <input type="email" id="email" name="email" placeholder="john.doe@example.com" required />
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Your password" required />
+
+      <!-- Forgot password link (use in index.html) -->
+      <a href="{{ url_for('forgot_password') }}" class="auth-link">Forgot your password?</a><br><br>
 
       <button type="submit">Login</button>
     </form>
@@ -32,7 +35,9 @@
   {% with messages = get_flashed_messages() %}
   {% if messages %}
     {% for msg in messages %}
-      <p style="color: red;">{{ msg }}</p>
+      <p style="color: {% if '✅' in msg %}green{% else %}red{% endif %};">
+        {{ msg }}
+      </p>
     {% endfor %}
   {% endif %}
 {% endwith %}

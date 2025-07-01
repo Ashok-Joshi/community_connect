@@ -102,3 +102,15 @@ button:hover {
 .extra-link a:hover {
   text-decoration: underline;
 }
+
+/* Style for both 'Forgot your password?' and 'Click here to Sign Up' links */
+.auth-link {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -60,6 +60,44 @@ def login():
 def dashboard():
     return render_template('dashboard.html')
 
+# Add Route: Forgot password page 
+
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        user = User.query.filter_by(email=email).first()
+        
+        if not user:
+            flash("❌ This email ID is not registered. Please sign up first.")
+            return redirect(url_for('forgot_password'))
+        
+        # If email exists, redirect to reset-password page with email as param
+        return redirect(url_for('reset_password', email=email))
+
+    return render_template('forgot_password.html')
+
+# Add Route: Reset Password Page
+
+@app.route('/reset-password/<email>', methods=['GET', 'POST'])
+def reset_password(email):
+    user = User.query.filter_by(email=email).first()
+
+    if not user:
+        flash("❌ This email ID is not registered. Please sign up first.")
+        return redirect(url_for('home'))
+    
+    if request.method == 'POST':
+        new_password = request.form['password']
+        hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
+        user.password = hashed_password
+        db.session.commit()
+        flash("✅ Password updated successfully. Please log in.")
+        return redirect(url_for('home'))
+
+    return render_template('reset_password.html', email=email)
+
+
 # MAIN
 if __name__ == '__main__':
     with app.app_context():

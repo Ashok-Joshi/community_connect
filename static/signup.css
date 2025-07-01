@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+.extra-link a {
+  color: #81d4fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.extra-link a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -21,7 +31,7 @@ body {
   background-color: #0d47a1;
   text-align: center;
   padding: 40px 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 25px rgba(0, 0, 0, 0.3);
 }
 
 .banner h1 {
@@ -37,12 +47,12 @@ body {
 }
 
 .form-box {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 35px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 35px 35px;
   margin-top: 60px;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-  width: 360px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.6);
+  width: 400px;
   backdrop-filter: blur(6px);
 }
 
